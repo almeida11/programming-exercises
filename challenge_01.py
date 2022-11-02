@@ -3,7 +3,7 @@ class Produtos():
         self.id = id
         self.lista_de_produtos = {'Café': 100, 'Açúcar': 200, 'MATEUS': 0}
 
-        if(not self.lista_de_produtos): raise Exception('Lista de Produtos Vazia')
+        if(not self.lista_de_produtos): raise Exception('Lista de Produtos Vazia!')
 
     def listaProdutos(self):
         lista = 'ID - PRODUTO - PREÇO'
@@ -13,14 +13,14 @@ class Produtos():
         return lista
 
     def pegaId(self):
-        id = int(input('\nPassa o produto ai carai: '))
+        id = int(input('\nSelecione o produto: '))
         if((id <= 0) or (id > len(self.lista_de_produtos))):
             print('Passe um ID correto!')
             id = Produtos.pegaId(self)
         return id
 
     def pegaQuantidade(self):
-        quantidade = int(input('\nPassa a quantidade ai carai: '))
+        quantidade = int(input('\nPasse a quantidade: '))
         if((quantidade < 0)):
             print('Passe uma quantidade correta!')
             quantidade = Produtos.pegaQuantidade(self)
@@ -47,13 +47,13 @@ class Produtos():
         return 0
 
 def main():
-    lojaDoMateus = Produtos()
-    print(lojaDoMateus.listaProdutos())
-    id = lojaDoMateus.pegaId()
-    quantidade = lojaDoMateus.pegaQuantidade()
-    nome = (lojaDoMateus.nomeProduto(id))
-    valor = (lojaDoMateus.valorProduto(id))
-    frete = (lojaDoMateus.valorFrete(quantidade))
+    loja = Produtos()
+    print(loja.listaProdutos())
+    id = loja.pegaId()
+    quantidade = loja.pegaQuantidade()
+    nome = (loja.nomeProduto(id))
+    valor = (loja.valorProduto(id))
+    frete = (loja.valorFrete(quantidade))
     print('Nome do produto: {}, valor do produto: {}, valor do frete: {}.'.format(nome, valor, frete))
 
 main()
