@@ -104,5 +104,5 @@ class Loja():
         
         print('O total a ser pago é: R$ {},00'.format(self.preco_total))
 
-lojaDoMateus = Loja('Matheus de Almeida')
+lojaDoMateus = Loja('Mateus de Almeida')
 lojaDoMateus.main()
