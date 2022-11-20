@@ -40,7 +40,7 @@ def cadastrarFuncionario(ID):
         "SETOR": setor,
         "SALARIO": salario
     }
-    lista_funcionarios.append(dados_funcionario)
+    lista_funcionarios.append(dados_funcionario.copy())
 #visualização de informações do funcionário
 def visualizarFuncionario():
     while True:
@@ -54,14 +54,18 @@ def visualizarFuncionario():
             selecao = int(input("Entre com a opção: "))
             #mostrar todos os funcionarios
             if selecao == 1:
-                print(lista_funcionarios)
+                print(lista_funcionarios) #apenas para visualizar o formato da lista
+
+                #aqui está com o problema de acessar os valores de cada chave
+                #consigo puxar as chaves dos dict mas não os valores de cada chave
+                #procurando uma solução
                 for i in lista_funcionarios:
                     for keys in i:
-                        print(f"{keys}: ", lista_funcionarios[0])
+                        print(f"{keys}: ")
                         for value in keys:
                             print(value)
                     
-
+            #FALTANDO OUTRAS OPÇÕES DE VISUALIZAÇÃO
             #mostrar funcionario por ID
             elif selecao == 2:
                 pass
@@ -77,6 +81,7 @@ def visualizarFuncionario():
         except ValueError:
             print("Digite um valor válido!")
 #remover dados de um funcionário
+#FALTANDO CONTRUIR A FUNÇÃO PARA EXCLUIR FUNCIONARIO
 def removerFuncionario():
     pass
 
