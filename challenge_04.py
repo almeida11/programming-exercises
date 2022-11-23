@@ -11,7 +11,6 @@ def menuPrograma():
     3) Remover Funcionário
     4) Sair
             """)
-        
             selecao = int(input("Entre com a opção: "))
             if selecao == 1:
                 matricula_funcionario = matricula_funcionario + 1
@@ -56,16 +55,11 @@ def visualizarFuncionario():
             if selecao == 1:
                 print(lista_funcionarios) #apenas para visualizar o formato da lista
 
-                #aqui está com o problema de acessar os valores de cada chave
-                #consigo puxar as chaves dos dict mas não os valores de cada chave
-                #procurando uma solução
                 for i in lista_funcionarios:
                     for keys in i:
                         print(f"{keys}: ")
                         for value in keys:
                             print(value)
-                    
-            #FALTANDO OUTRAS OPÇÕES DE VISUALIZAÇÃO
             #mostrar funcionario por ID
             elif selecao == 2:
                 pass
@@ -81,7 +75,6 @@ def visualizarFuncionario():
         except ValueError:
             print("Digite um valor válido!")
 #remover dados de um funcionário
-#FALTANDO CONTRUIR A FUNÇÃO PARA EXCLUIR FUNCIONARIO
 def removerFuncionario():
     pass
 
