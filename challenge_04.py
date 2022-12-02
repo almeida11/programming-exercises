@@ -54,12 +54,14 @@ def visualizarFuncionario():
             #mostrar todos os funcionarios
             if selecao == 1:
                 print(lista_funcionarios) #apenas para visualizar o formato da lista
-
+            #não está demonstrando o valor
                 for i in lista_funcionarios:
                     for keys in i:
                         print(f"{keys}: ")
                         for value in keys:
                             print(value)
+
+            #PENDENTE DESENVOLVER RESTANTE DA FUNÇÃO
             #mostrar funcionario por ID
             elif selecao == 2:
                 pass
