@@ -72,10 +72,10 @@ def visualizarFuncionario():
             else:
                 print("Opção Inválida!")
                 visualizarFuncionario()
-        except ValueError:
+        except ValueError: #se digitado valor errado
             print("Digite um valor válido!")
 #remover dados de um funcionário
-def removerFuncionario():
+def removerFuncionario(): #preparar essa função
     pass
 
 menuPrograma()
